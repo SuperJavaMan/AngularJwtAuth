@@ -23,14 +23,7 @@ export class DeleteNoteComponent implements OnInit {
   }
   deleteNote() {
     console.log(this.id);
-    this.noteService.deleteNote(this.id).subscribe(value => value,
-                                                  error => {
-      if (error != null) {
-        console.log(error.message + ' console msg');
-        this.message = error.message;
-      } else {
-        this.message = 'Note was deleted!';
-      }
-    });
+    this.noteService.deleteNote(this.id).subscribe();
+    this.message = 'Note was deleted!';
   }
 }
