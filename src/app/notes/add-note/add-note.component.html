@@ -1,0 +1,9 @@
+<div class="form-group">
+  <div *ngIf="message != null" class="alert alert-success" role="alert">{{message}}</div>
+  <h6>Title</h6>
+  <input type="text" [(ngModel)]="note.title" class="form-control" placeholder="Text input">
+  <h6>Article</h6>
+  <textarea [(ngModel)]="note.body" class="form-control" rows="10"></textarea>
+  <button class="btn btn-success" (click)="addNote()">Post</button>
+  <a routerLink="/notes" class="btn btn-info">Back to Notes</a>
+</div>

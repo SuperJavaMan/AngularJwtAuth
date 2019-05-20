@@ -1,0 +1,13 @@
+<div class="alert alert-danger" role="alert">{{message}}</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h5 class="panel-title">{{note.id}}. {{note.title}}</h5>
+  </div>
+  <div class="panel-body">
+    {{note.body}}
+  </div>
+  <nav>
+    <a class="btn btn-danger" (click)="deleteNote()">Delete</a>
+    <a routerLink="/notes" class="btn btn-info">Back to Notes</a>
+  </nav>
+</div>

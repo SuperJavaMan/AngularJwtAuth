@@ -1,0 +1,14 @@
+<div *ngIf="note != null" class="panel panel-default">
+  <div class="panel-heading">
+    <h5 class="panel-title">{{note.id}}. {{note.title}}</h5>
+  </div>
+  <div class="panel-body">
+    {{note.body}}
+  </div>
+  <nav>
+    <a routerLink="/admin/add" class="btn btn-success">Add New Note</a>
+    <a [routerLink]="['/admin/update', note.id]" class="btn btn-primary">Edit</a>
+    <a [routerLink]="['/admin/delete', note.id]" class="btn btn-danger">Delete</a>
+    <a routerLink="/notes" class="btn btn-info">Back to Notes</a>
+  </nav>
+</div>

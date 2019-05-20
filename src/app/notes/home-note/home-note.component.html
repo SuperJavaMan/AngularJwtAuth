@@ -1,0 +1,11 @@
+<div *ngIf="notes != null">
+  <div *ngFor="let note of notes"  class="panel panel-default">
+    <div class="panel-heading">
+      <h5 class="panel-title">{{note.id}}. {{note.title}}</h5>
+    </div>
+    <div class="panel-body">
+      {{note.body.slice(0, 100)}}
+    </div>
+    <a [routerLink]="['/notes', note.id]" class="btn btn-primary">Read more...</a>
+  </div>
+</div>
