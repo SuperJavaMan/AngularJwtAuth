@@ -6,10 +6,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
+  // private userUrl = 'http://localhost:8080/api/test/user';
+  // private pmUrl = 'http://localhost:8080/api/test/pm';
+  // private adminUrl = 'http://localhost:8080/api/test/admin';
 
-  private userUrl = 'http://localhost:8080/api/test/user';
-  private pmUrl = 'http://localhost:8080/api/test/pm';
-  private adminUrl = 'http://localhost:8080/api/test/admin';
+  private userUrl = 'http://192.168.99.100:8080/api/test/user';
+  private pmUrl = 'http://192.168.99.100:8080/api/test/pm';
+  private adminUrl = 'http://192.168.99.100:8080/api/test/admin';
 
   constructor(private http: HttpClient) { }
 

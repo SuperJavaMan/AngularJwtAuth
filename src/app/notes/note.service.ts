@@ -8,7 +8,7 @@ import {Note} from './note';
 })
 export class NoteService {
 
-  url = 'http://localhost:8080/api/notes/';
+  url = 'http://notes-service-jwt.herokuapp.com/api/notes/';
   constructor(private http: HttpClient) { }
 
   getAllNotes(): Observable<Note[]> {
